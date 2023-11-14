@@ -151,7 +151,7 @@ class Database:
             ''', (new_fio, new_phone, new_email, new_salary, employee_id))
 
     def delete_employee(self, employee_id):
-        """Удаление сотрудника из базы данных."""
+        """Удаление сотрудника из базы данных. """
         with self.conn:
             self.conn.execute('DELETE FROM employees WHERE id=?', (employee_id,))
 
